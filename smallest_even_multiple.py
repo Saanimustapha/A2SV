@@ -4,8 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        smallestEvenMultiple = n
-        while True:
-            if smallestEvenMultiple%2==0 and smallestEvenMultiple%n==0:
-                return smallestEvenMultiple
-            smallestEvenMultiple*=2
+        for num in range(n,2*n+1):
+            if num%2 == 0 and num%n == 0:
+                return num
